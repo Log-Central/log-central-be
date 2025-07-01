@@ -14,6 +14,22 @@ services:
     extra_hosts:
       - "host.docker.internal:host-gateway"
 
+  caddy:
+    image: jaredlander/caddy-dns:duckdns-latest
+    container_name: caddy_proxy
+    ports:
+      - "80:80"
+      - "443:443"
+    volumes:
+      - ./caddy/Caddyfile:/etc/caddy/Caddyfile
+      - caddy_data:/data
+      - caddy_config:/config
+    env_file:
+      - .env
+    depends_on:
+      - django
+    restart: unless-stopped
+
   celery:
     build: .
     container_name: celery_worker
@@ -24,3 +40,7 @@ services:
       - .env
     extra_hosts:
       - "host.docker.internal:host-gateway"
+
+volumes:
+  caddy_data:
+  caddy_config:
