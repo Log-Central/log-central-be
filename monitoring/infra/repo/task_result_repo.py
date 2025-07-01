@@ -1,6 +1,5 @@
 from typing import Any
 
-from django.forms import model_to_dict
 from typing_extensions import override
 
 from monitoring.domain.i_repo.i_task_result_repo import ITaskResultRepo

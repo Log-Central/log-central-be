@@ -2,11 +2,12 @@ import boto3
 from botocore.exceptions import ClientError
 from typing_extensions import override
 
+from common.utils.singleton import Singleton
 from config import settings
 from monitoring.service.i_storage.i_storage_provider import IAgentStorageProvider
 
 
-class S3AgentStorageProvider(IAgentStorageProvider):
+class S3AgentStorageProvider(IAgentStorageProvider, metaclass=Singleton):
     def __init__(self):
         self.bucket = settings.S3_BUCKET_NAME
         self.region = settings.S3_AWS_REGION

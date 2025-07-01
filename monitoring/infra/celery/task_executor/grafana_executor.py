@@ -25,7 +25,6 @@ from monitoring.service.i_executors.excutor_DTO import (
     CreateServiceAccountDTO,
     CreateServiceTokenDTO,
     CreateUserFolderDTO,
-    DashboardProvisionDTO,
     FinalizeDashboardDTO,
     ProvisionFailureDTO,
     SetFolderPermissionsDTO,

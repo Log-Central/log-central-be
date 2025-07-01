@@ -6,7 +6,6 @@ from monitoring.domain.visualization_platform.dashboard import (
     Dashboard,
     PublicDashboard,
 )
-from monitoring.infra.models.monitoring_project_model import MonitoringProjectModel
 from monitoring.infra.models.visualization_platform_model import (
     DashboardModel,
     PublicDashboardModel,
