@@ -1,2 +1,2 @@
 #!/bin/bash
-poetry run celery -A config worker --loglevel=DEBUG --concurrency=1
+poetry run celery -A config worker -l info --pool=prefork --concurrency=2 -E

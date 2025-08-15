@@ -10,6 +10,7 @@ from monitoring.interface.views.my_monitoring_project_views import (
 from monitoring.interface.views.my_monitoring_projects_view import (
     MyMonitoringProjectsView,
 )
+from monitoring.interface.views.test_kill_worker import TestKillWorkerView
 
 urlpatterns = [
     path(
@@ -32,4 +33,5 @@ urlpatterns = [
         MyMonitoringProjectsView.as_view(),
         name="monitoring-projects-list",
     ),
+    path("test-kill-worker/", TestKillWorkerView.as_view(), name="test-kill-worker"),
 ]

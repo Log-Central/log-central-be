@@ -14,4 +14,5 @@ def locking_task(*, max_retries: int, default_retry_delay: int):
         base=LockingTask,
         max_retries=max_retries,
         default_retry_delay=default_retry_delay,
+        track_started=True,
     )

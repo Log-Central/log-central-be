@@ -16,6 +16,9 @@ TASK_QUEUE = "worker_tasks_queue"
 ROUTING_KEY = "tasks"
 DIRECT_EXCHANGE = "worker_tasks_exchange"
 
+app.conf.worker_send_task_events = True
+app.conf.task_track_started = True
+
 worker_queue = Queue(
     TASK_QUEUE,
     Exchange(DIRECT_EXCHANGE, type="direct"),

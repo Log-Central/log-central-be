@@ -16,6 +16,7 @@ services:
 
   caddy:
     image: jaredlander/caddy-dns:duckdns-latest
+    platform: linux/amd64
     container_name: caddy_proxy
     ports:
       - "80:80"

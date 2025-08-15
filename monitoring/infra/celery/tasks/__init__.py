@@ -11,3 +11,5 @@ from .monitoring_project_tasks import (
     finalize_monitoring_project,
     handle_monitoring_project_failure,
 )
+
+from .for_test_task import long_task
