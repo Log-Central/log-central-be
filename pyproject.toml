@@ -38,6 +38,9 @@ redis = "^6.1.0"
 django-celery-results = "^2.6.0"
 pytest = "^8.3.5"
 pytest-django = "^4.11.1"
+opentelemetry-distro = "^0.57b0"
+opentelemetry-exporter-otlp = "^1.36.0"
+opentelemetry-instrumentation-django = "^0.57b0"
 
 
 

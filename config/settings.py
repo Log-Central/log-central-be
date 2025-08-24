@@ -9,11 +9,13 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 env = environ.Env()
 environ.Env.read_env(env_file=BASE_DIR / ".env")
 
+
 # Environment Settings
 ENV = env("ENV", default="localhost")
 SECRET_KEY = env("SECRET_KEY", default="")
-DEBUG = env.bool("DEBUG", default=True)
+DEBUG = True
 ALLOWED_HOSTS = ["*"]
+
 
 # Logging Settings
 LOG_FILE = BASE_DIR / "logs/debug.log"
@@ -44,8 +46,10 @@ LOGGING = {
     },
 }
 
+
 # swagger
 REST_FRAMEWORK = {"DEFAULT_SCHEMA_CLASS": "drf_spectacular.openapi.AutoSchema"}
+
 
 # Installed Apps
 INSTALLED_APPS = [
